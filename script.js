@@ -11,18 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const cookieSection = document.querySelector(".cookie-cont");
-
-  // თუ უკვე დათანხმებულია, ვეღარ ვხედავთ
+  
   const accepted = localStorage.getItem("cookie-consent");
   if (accepted === "yes" || accepted === "no") {
     if (cookieSection) cookieSection.style.display = "none";
   }
 });
 
-// ღილაკის ფუნქცია
 function cookieBtnClicked(e, answer) {
   e.preventDefault();
-  localStorage.setItem("cookie-consent", answer); // "yes" ან "no"
+  localStorage.setItem("cookie-consent", answer);
 
   const cookieSection = document.querySelector(".cookie-cont");
   if (cookieSection) {
@@ -52,7 +50,6 @@ async function loadReviews() {
   });
 }
 
-// ———— რეგისტრაციის ფორმა ————
 function initRegistrationForm() {
   const regForm = document.getElementById("registration");
   if (!regForm) return;
@@ -112,7 +109,6 @@ function loadRegistrationData() {
   document.getElementById("check").checked = data.agree || false;
 }
 
-// ———— ჯავშნის ფორმა ————
 function initBookingForm() {
   const bookForm = document.getElementById("booking-form");
   if (!bookForm) return;
@@ -175,7 +171,6 @@ function loadBookingData() {
   document.getElementById("guests").value = data.guests || "";
 }
 
-// ———— Email Live Validation მხოლოდ რეგისტრაციისთვის ————
 function initEmailLiveValidation() {
   const emailInput = document.getElementById("email");
   const emailError = document.getElementById("email-error");
@@ -198,7 +193,6 @@ function initEmailLiveValidation() {
   });
 }
 
-// ———— პაროლის ხილვადობის გადართვა ————
 function initPasswordToggle() {
   const pw1 = document.getElementById("passwordfield");
   const pw2 = document.getElementById("passwordfield2");
@@ -218,7 +212,6 @@ function initPasswordToggle() {
   });
 }
 
-// ———— დამხმარე ფუნქციები ————
 function getValue(id) {
   const el = document.getElementById(id);
   return el ? el.value.trim() : "";
@@ -237,7 +230,6 @@ function showErrors(errors, form) {
   }
 }
 
-// ———— ინიციალიზაცია გვერდის ჩატვირთვისას ————
 document.addEventListener("DOMContentLoaded", function () {
   loadReviews();
   initRegistrationForm();
