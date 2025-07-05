@@ -67,13 +67,7 @@ h1 {
     background-repeat: no-repeat;
     position: relative;
 }
-/* .info {
-    position: absolute;
-    top: 50%;
-    height: 200px;
-    width: 100%;
-    background-color: rgba(207, 169, 63, 0.7);
-} */
+
 .info {
   position: absolute;
   top: 50%;
@@ -231,7 +225,6 @@ label {
   border-radius: 8px;
   cursor: pointer;
 }
-
 
 .error-text,
 #email-error {
@@ -412,20 +405,6 @@ label {
   color: gold;
   border: 1px solid gold;
 }
-
-/* @media screen and (max-width: 975px) {
-  .info-p {
-    font-size: 48px;
-  }
-
-  .book-in {
-    padding: 10px 20px;
-    height: 35px;
-  }
-  .book-in .h4 {
-    font-size: 18px;
-  }
-} */
 
 @media screen and (max-width: 768px) {
   .nav-links {
