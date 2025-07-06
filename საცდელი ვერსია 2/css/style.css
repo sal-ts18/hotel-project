@@ -407,7 +407,7 @@ label {
   border: 1px solid gold;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
